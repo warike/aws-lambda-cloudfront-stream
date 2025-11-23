@@ -17,9 +17,9 @@ This project demonstrates a generative AI use case using AWS Lambda, CloudFront,
 
 ## Project Plans & Tasks
 
-- [01. Notebook Environment Setup](./plans/01_NOTEBOOK_ENVIRONMENT.md)
-- [02. Infrastructure Deployment](./plans/02_INFRASTRUCTURE_DEPLOYMENT.md)
-- [03. Server Application Development](./plans/03_SERVER_APP_DEVELOPMENT.md)
+- [01. Notebook Environment Setup](./docs/plans/01_NOTEBOOK_ENVIRONMENT.md)
+- [02. Infrastructure Deployment](./docs/plans/02_INFRASTRUCTURE_DEPLOYMENT.md)
+- [03. Server Application Development](./docs/plans/03_SERVER_APP_DEVELOPMENT.md)
 
 ## Quick Links
 
