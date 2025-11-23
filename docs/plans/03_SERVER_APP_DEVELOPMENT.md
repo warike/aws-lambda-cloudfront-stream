@@ -47,3 +47,6 @@ Develop the core server-side logic for the Generative AI assistant. This applica
 
 ### Integration Testing
 - [x] **Streaming**: `make test` confirms chunks are received.
+
+### Credits
+Created by [Warike technologies](https://warike.tech)

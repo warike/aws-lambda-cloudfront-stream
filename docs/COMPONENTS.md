@@ -30,3 +30,7 @@ Lightweight JavaScript functions that run at the CloudFront edge locations to ma
     - If the host does not match, it returns a `403 Forbidden` response.
     - If it matches, the request is allowed to proceed to the origin (Lambda).
 - **Association**: Typically associated with the `viewer-request` event in the CloudFront distribution.
+
+
+### Credits
+Created by [Warike technologies](https://warike.tech)

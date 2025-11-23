@@ -56,3 +56,6 @@ make test
 
 **Expected Behavior:**
 You should see the generated text response appearing in chunks as it is streamed from the AI model.
+
+### Credits
+Created by [Warike technologies](https://warike.tech)

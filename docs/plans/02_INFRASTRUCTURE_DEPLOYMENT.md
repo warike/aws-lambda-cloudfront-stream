@@ -44,3 +44,6 @@ Deploy the core AWS infrastructure required to support the Generative AI applica
 - [x] **S3 Access**: Use `infrastructure_test.ipynb` to verify the created bucket is accessible and writable.
 - [ ] **Create Embeddings**: Verify that embeddings can be generated and stored (Pending).
 - [x] **Lambda Invocation**: Test invoking the Lambda function directly via AWS SDK.
+
+### Credits
+Created by [Warike technologies](https://warike.tech)

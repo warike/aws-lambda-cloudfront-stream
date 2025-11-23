@@ -43,3 +43,6 @@ Establish a robust, isolated Python environment for testing AWS infrastructure a
     - *Expected Result*: Lists objects in the bucket or confirms bucket is empty.
 3.  **Bedrock Invocation**: Run "Test 2" in `infrastructure_test.ipynb`.
     - *Expected Result*: Returns a text response from the Llama 3 model.
+
+### Credits
+Created by [Warike technologies](https://warike.tech)

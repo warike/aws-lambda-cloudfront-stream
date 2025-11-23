@@ -50,8 +50,6 @@ The Terraform configuration is located in the `infra` directory.
 
 ### Workflow
 
-### Workflow
-
 The entire deployment process is automated via a `Makefile`.
 
 1.  **Deploy Infrastructure**:
@@ -65,3 +63,6 @@ The entire deployment process is automated via a `Makefile`.
 - `Makefile`: Orchestrates the entire deployment workflow (build, push, apply, test).
 - `infra/push_chat_image.sh`: Helper script used by the Makefile to build and push the Docker image.
 - `infra/test_stream.sh`: Helper script used by `make test` to verify the Lambda streaming endpoint.
+
+### Credits
+Created by [Warike technologies](https://warike.tech)

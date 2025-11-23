@@ -1,4 +1,4 @@
-# AWS Lambda CloudFront Stream Project
+# Warike technologies -  AWS Lambda CloudFront Stream Project
 
 This project demonstrates a generative AI use case using AWS Lambda, CloudFront, and streaming responses. It leverages a serverless architecture to provide real-time chat capabilities.
 
@@ -27,3 +27,7 @@ This project demonstrates a generative AI use case using AWS Lambda, CloudFront,
     - Full Deployment: `make deploy`
     - Test Streaming: `make test`
 - **CloudFront Function**: `infra/functions/auth.js`
+
+
+## Credits
+Created by [Warike technologies](https://warike.tech)
