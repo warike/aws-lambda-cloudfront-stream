@@ -1,0 +1,120 @@
+# ============================================
+# Node.js / TypeScript (Server App)
+# ============================================
+**/node_modules/
+**/npm-debug.log
+**/yarn-error.log
+**/.pnpm-debug.log
+**/pnpm-lock.yaml
+
+# Build outputs
+**/dist/
+**/build/
+**/*.tsbuildinfo
+
+# ============================================
+# Python (Notebooks)
+# ============================================
+**/*.pyc
+**/*.pyo
+**/__pycache__/
+**/*.pyd
+**/*.db
+**/*.sqlite
+
+# Jupyter Notebook checkpoints
+**/.ipynb_checkpoints/
+
+# Virtual environments
+**/.venv/
+**/venv/
+**/env/
+**/env.bak/
+**/venv.bak/
+
+# Python version files
+**/.python-version
+
+# ============================================
+# Environment Variables
+# ============================================
+**/.env
+**/.env.local
+**/.env.*.local
+**/.env.development
+**/.env.production
+
+# Keep example files
+!**/.env.example
+
+# ============================================
+# Terraform
+# ============================================
+**/.terraform/
+**/.terraform.lock.hcl
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfstate.backup
+**/*.tfstate.*.backup
+**/*.tfvars
+**/override.tf
+**/override.tf.json
+**/.terraformrc
+**/terraform.rc
+
+# ============================================
+# Docker
+# ============================================
+**/.dockerignore
+
+# ============================================
+# Logs
+# ============================================
+**/*.log
+**/logs/
+**/*.pot
+
+# ============================================
+# IDEs and Editors
+# ============================================
+**/.idea/
+**/.vscode/
+**/*.swp
+**/*.swo
+**/*~
+**/.project
+**/.classpath
+**/.c9/
+**/*.launch
+**/.settings/
+**/*.sublime-workspace
+
+# ============================================
+# OS Files
+# ============================================
+# macOS
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+
+# Windows
+**/Thumbs.db
+**/ehthumbs.db
+**/Desktop.ini
+
+# Linux
+**/.directory
+
+# ============================================
+# AWS
+# ============================================
+**/.aws/
+
+# ============================================
+# Temporary Files
+# ============================================
+**/tmp/
+**/temp/
+**/*.tmp
+**/*.bak
+**/*.swp
