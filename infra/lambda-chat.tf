@@ -1,7 +1,7 @@
 locals {
   lambda_chat = {
     name        = "chat-${basename(path.cwd)}"
-    image       = "${aws_ecr_repository.warike_development_ecr.repository_url}:chat-v6"
+    image       = "${aws_ecr_repository.warike_development_ecr.repository_url}:chat-latest"
     description = "Lambda chat function for ${local.project_name}"
     memory_size = 512
     timeout     = 60

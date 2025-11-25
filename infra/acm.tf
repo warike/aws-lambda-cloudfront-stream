@@ -1,7 +1,4 @@
-data "aws_route53_zone" "warike_development_warike_tech" {
-  name = local.domain_name
-}
-
+## Amazon Certificate Manager
 module "warike_development_acm" {
   source  = "terraform-aws-modules/acm/aws"
   version = "~> 6.1.0"
@@ -15,8 +12,12 @@ module "warike_development_acm" {
   tags = local.tags
 }
 
+## Route 53 - Hosted Zone
+data "aws_route53_zone" "warike_development_warike_tech" {
+  name = local.domain_name
+}
 
-
+## Route 53 - Apex Record
 resource "aws_route53_record" "warike_development_apex_record" {
   zone_id = data.aws_route53_zone.warike_development_warike_tech.zone_id
   name    = local.domain_name

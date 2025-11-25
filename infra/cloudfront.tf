@@ -102,11 +102,6 @@ resource "aws_lambda_permission" "warike_development_allow_cloudfront_invoke_fun
   source_arn    = module.warike_development_cloudfront.cloudfront_distribution_arn
 }
 
-## Cloudfront distribution domain name
-output "cloudfront_distribution_domain_name" {
-  value = module.warike_development_cloudfront.cloudfront_distribution_domain_name
-}
-
 resource "aws_cloudfront_function" "warike_development_restrict_domain" {
   name    = "restrict-domain-${local.project_name}"
   runtime = "cloudfront-js-1.0"
@@ -114,4 +109,9 @@ resource "aws_cloudfront_function" "warike_development_restrict_domain" {
   publish = true
   code    = file("${path.module}/functions/auth.js")
 
+}
+
+## Cloudfront distribution domain name
+output "cloudfront_distribution_domain_name" {
+  value = module.warike_development_cloudfront.cloudfront_distribution_domain_name
 }

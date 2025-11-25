@@ -1,4 +1,4 @@
-.PHONY: deploy compile-server push-image terraform-apply
+.PHONY: deploy setup clean compile-server push-image terraform-apply destroy
 
 # Extract current version from terraform file (e.g., chat-v1)
 CURRENT_VERSION := $(shell grep -o 'chat-v[0-9]*' infra/lambda-chat.tf | head -n 1)
@@ -9,7 +9,23 @@ NEXT_VERSION_NUM := $(shell echo $$(($(VERSION_NUM) + 1)))
 # Form the new version string (e.g., chat-v2)
 NEXT_VERSION := chat-v$(NEXT_VERSION_NUM)
 
-deploy: compile-server push-image terraform-apply test
+# Setup vector store infrastructure
+setup:
+	@echo "Setting up S3 Vector Store..."
+	./infra/setup_vector_store.sh
+
+# Deploy full stack (includes vector store setup)
+deploy: setup compile-server push-image terraform-apply test
+
+# Clean up vector store infrastructure
+clean:
+	@echo "Cleaning up S3 Vector Store..."
+	./infra/cleanup_vector_store.sh
+
+# Destroy all infrastructure (Terraform + Vector Store)
+destroy: clean
+	@echo "Destroying Terraform infrastructure..."
+	cd infra && terraform destroy -auto-approve
 
 compile-server:
 	@echo "Compiling server app..."
@@ -26,7 +42,7 @@ push-image:
 
 terraform-apply:
 	@echo "Applying Terraform changes..."
-	cd infra && terraform apply -auto-approve
+	cd infra && terraform apply
 
 test:
 	@echo "Running integration tests..."
